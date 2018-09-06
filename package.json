@@ -1,0 +1,26 @@
+{
+  "name": "nodemn-09-2018-serverless-gcloud",
+  "version": "1.0.0",
+  "description": "September 2018 NodeMN presentation on Serverless.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Olson3R/nodemn-09-2018-serverless-gcloud.git"
+  },
+  "keywords": [
+    "nodemn",
+    "serverless"
+  ],
+  "author": "Scott Olson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Olson3R/nodemn-09-2018-serverless-gcloud/issues"
+  },
+  "homepage": "https://github.com/Olson3R/nodemn-09-2018-serverless-gcloud#readme",
+  "devDependencies": {
+    "serverless-google-cloudfunctions": "^1.2.0"
+  }
+}
