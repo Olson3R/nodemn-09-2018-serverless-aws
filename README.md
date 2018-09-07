@@ -58,9 +58,9 @@ TODO
   - [Request](https://github.com/request/request) - Simplified HTTP request client.
 - Create your own endpoints (and run locally).
   - Clone the repo.
-  - Follow the installation instructions above.
+  - Follow the [installation instructions](https://github.com/Olson3R/nodemn-09-2018-serverless-aws#installation) above.
   - Add your endpoints.
-    - Will have to add your handler code.
-    - Will have to add the endpoints to the serverless.yml.
+    - Will have to add your handler code. Similar to [this](https://github.com/Olson3R/nodemn-09-2018-serverless-aws/blob/master/lib/items-api.js#L56-L60)
+    - Will have to add the endpoints to the [serverless.yml](https://github.com/Olson3R/nodemn-09-2018-serverless-aws/blob/master/serverless.yml) file.
   - Start the serverless offline server `serverless offline`
   
