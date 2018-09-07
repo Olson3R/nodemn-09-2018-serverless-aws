@@ -4,6 +4,12 @@
 # Presentation
 TODO
 
+# Installation
+- Make sure you have a proper version of node 8.10.
+  - I recommend using [nvm](https://github.com/creationix/nvm) along with [avn](https://github.com/wbyoung/avn).
+- Install serverless globally `npm install -g serverless`.
+- Install modules `npm install`
+
 # Authorization
 
 - The `items` endpoints require _authorization_.
@@ -20,8 +26,11 @@ TODO
 - GET - https://38s3jpykvj.execute-api.us-east-1.amazonaws.com/dev/items
 - GET - https://38s3jpykvj.execute-api.us-east-1.amazonaws.com/dev/items/{id}
 - POST - https://38s3jpykvj.execute-api.us-east-1.amazonaws.com/dev/items
+  - Doesn't actually persist new items.
 - PUT - https://38s3jpykvj.execute-api.us-east-1.amazonaws.com/dev/items/{id}
+  - Doesn't actually persist updates to items.
 - DELETE - https://38s3jpykvj.execute-api.us-east-1.amazonaws.com/dev/items/{id}
+  - Doesn't actually delete items.
 
 # Envelope
 ## Success
@@ -37,7 +46,21 @@ TODO
 ```
 
 # Item Model
-- id - string[uuid] - Unique identifier.
-- name - string - Name for the item.
-- quantity - integer - The number of items in stock.
-- tags - array[string] - Key words associated with the item.
+- `id` - string[uuid] - Unique identifier.
+- `name` - string - Name for the item.
+- `quantity` - integer - The number of items in stock.
+- `tags` - array[string] - Key words associated with the item.
+
+# Workshop
+
+- Create a CLI app to consume the `items` endpoints.
+  - [Commander](https://github.com/tj/commander.js) - Node.js command-line interfaces made easy.
+  - [Request](https://github.com/request/request) - Simplified HTTP request client.
+- Create your own endpoints (and run locally).
+  - Clone the repo.
+  - Follow the installation instructions above.
+  - Add your endpoints.
+    - Will have to add your handler code.
+    - Will have to add the endpoints to the serverless.yml.
+  - Start the serverless offline server `serverless offline`
+  
