@@ -1,13 +1,12 @@
-service: node-simple-http-endpoint # NOTE: Don't put the word "google" in here
+service: node-simple-http-endpoints
 
 provider:
-  name: google
-  runtime: nodejs
-  project: nodemn-september-2018
-  credentials: ~/.gcloud/nodemn-september-2018.json # path must be absolute
+  name: aws
+  runtime: nodejs8.10
+  profile: nodemn
 
 plugins:
-  - serverless-google-cloudfunctions
+  - serverless-offline
 
 package:
   exclude:
@@ -16,7 +15,52 @@ package:
     - .git/**
 
 functions:
+  authorizerFunc:
+    handler: index.authorizer
   helloWorld:
-    handler: http
+    handler: index.http
     events:
-      - http: path
+      - http:
+          path: http
+          method: get
+          cors: true
+  itemsIndex:
+    handler: lib/items-api.index
+    events:
+      - http:
+          path: items
+          method: get
+          cors: true
+          authorizer: authorizerFunc
+  itemsShow:
+    handler: lib/items-api.show
+    events:
+      - http:
+          path: items/{id}
+          method: get
+          cors: true
+          authorizer: authorizerFunc
+  itemsCreate:
+    handler: lib/items-api.create
+    events:
+      - http:
+          path: items
+          method: post
+          cors: true
+          authorizer: authorizerFunc
+  itemsUpdate:
+    handler: lib/items-api.update
+    events:
+      - http:
+          path: items/{id}
+          method: put
+          cors: true
+          authorizer: authorizerFunc
+  itemsDelete:
+    handler: lib/items-api.delete
+    events:
+      - http:
+          path: items/{id}
+          method: delete
+          cors: true
+          authorizer: authorizerFunc

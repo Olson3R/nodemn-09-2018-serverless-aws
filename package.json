@@ -12,7 +12,8 @@
   },
   "keywords": [
     "nodemn",
-    "serverless"
+    "serverless",
+    "aws"
   ],
   "author": "Scott Olson",
   "license": "MIT",
@@ -21,6 +22,11 @@
   },
   "homepage": "https://github.com/Olson3R/nodemn-09-2018-serverless-gcloud#readme",
   "devDependencies": {
-    "serverless-google-cloudfunctions": "^1.2.0"
+    "serverless-offline": "^3.25.11"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "uuid": "^3.3.2",
+    "validator": "^10.7.1"
   }
 }
