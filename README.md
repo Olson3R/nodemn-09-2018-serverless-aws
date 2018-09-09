@@ -2,7 +2,7 @@
 [September 2018 NodeMN](https://www.meetup.com/NodeMN/events/254418194/) presentation on [Serverless](https://serverless.com/) hosted on AWS.
 
 # Presentation
-TODO
+https://docs.google.com/presentation/d/1uyn_ejfIkaejhZ6xanRnFtiTIRbOCzwK-RrT521IpOY/edit?usp=sharing
 
 # Installation
 - Make sure you have a proper version of node 8.10.
