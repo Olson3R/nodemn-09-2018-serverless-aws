@@ -10,7 +10,6 @@ plugins:
 
 package:
   exclude:
-    - node_modules/**
     - .gitignore
     - .git/**
 
